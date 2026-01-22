@@ -1,0 +1,20 @@
+{
+  "Group": "kimimaro",
+  "Name": "home_parchment",
+  "Version": "1.0.0",
+  "Description": "Simple vanilla friendly way to take yourself back to your home",
+  "Authors": [
+    {
+      "Name": "kimimaro",
+      "Email": "",
+      "Url": "yussufbiyik.github.io"
+    }
+  ],
+  "Website": "https://legacy.curseforge.com/hytale/mods/home-parchment",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": false,
+  "SubPlugins": []
+}

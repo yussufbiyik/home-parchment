@@ -1,0 +1,132 @@
+{
+  "TranslationProperties": {
+    "Name": "Home Parchment",
+    "Description": "Takes you back home."
+  },
+  "ItemLevel": 10,
+  "Categories": [
+    "Items.Tools"
+  ],
+  "IconProperties": {
+    "Scale": 1,
+    "Rotation": [
+      45,
+      56,
+      20
+    ],
+    "Translation": [
+      -0.5,
+      0
+    ]
+  },
+  "Recipe": {
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Deco_Scroll",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Void_Essence",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Ingredient_Life_Essence",
+        "Quantity": 5
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Type": "Crafting",
+        "Categories": [
+          "Arcane_Misc"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 1
+  },
+  "Utility": {
+    "Compatible": false,
+    "Usable": true
+  },
+  "BlockType": {
+    "BlockSoundSetId": "Bush",
+    "CustomModel": "Resources/home_parchment.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Resources/texture.png",
+        "Weight": 1
+      }
+    ],
+    "CustomModelScale": 1,
+    "DrawType": "Model",
+    "Flags": {
+      "IsUsable": true
+    },
+    "HitboxType": "Block_Quarter",
+    "Material": "Empty",
+    "RandomRotation": "YawStep1XZ",
+    "Opacity": "Transparent",
+    "Light": {
+      "Color": "#225"
+    }
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "Potion"
+    ]
+  },
+  "Scale": 1.5,
+  "MaxStack": 1,
+  "DropOnDeath": false,
+  "Interactions": {
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "Condition",
+          "Next": {
+            "Type": "DarkhaxSpellbookWarpHome",
+            "Next": {
+              "Type": "ModifyInventory",
+              "ItemToRemove": {
+                "Id": "Home_Parchment",
+                "Quantity": 1
+              }
+            }
+          },
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "Explosion_Big",
+                "TargetEntityPart": "Entity",
+                "DetachedFromModel": false
+              },
+              {
+                "SystemId": "Explosion_Big",
+                "TargetEntityPart": "Entity",
+                "DetachedFromModel": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "ItemSoundSetId": "ISS_Items_Paper",
+  "RenderDeployablePreview": true,
+  "Model": "Resources/home_parchment.blockymodel",
+  "Texture": "Resources/texture.png",
+  "Icon": "Icons/ItemsGenerated/Home_Parchment.png",
+  "UsePlayerAnimations": true,
+  "ItemEntity": {
+    "ShowItemParticles": true,
+    "ParticleSystemId": "Magic_Sparks_GS"
+  },
+  "PlayerAnimationsId": {
+    "Parent": "Item",
+    "UseFirstPersonOverrides": false
+  }
+}
